@@ -50,6 +50,7 @@ document.addImage(fig,1)
 
 
 document.addParagraph("Wyświetlcie na ekranie jedną warstwę koloru — dowolną czerwoną, zielona lub niebieską (przykład czerwony).")
+img = plt.imread('Lab2/data/B01.png')
 R=img[:,:,0]
 ax.imshow(R)
 document.addImage(fig,1)
@@ -67,10 +68,6 @@ gray_image = np.dot(img[...,:3], [0.2126, 0.7152, 0.0722])
 ax.imshow(gray_image, cmap='gray')
 document.addImage(fig,1)
 document.addParagraph("Sprawdźmy teraz jak wygląda wyświetlony obraz wczytany za pomocą OpenCV, w ten sam sposób jak na początku.")
-R=img2[:,:,0]
-gray_image = np.dot(img[...,:3], [0.2126, 0.7152, 0.0722])
-ax.imshow(gray_image, cmap='gray')
-document.addParagraph("Teraz naprawmy błąd. zamienimy BGR na RGB")
 img_RGB = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)
 img_BGR = cv2.cvtColor(img_RGB, cv2.COLOR_RGB2BGR)
 R=img_BGR[:,:,0]
