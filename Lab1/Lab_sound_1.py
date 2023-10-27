@@ -4,7 +4,6 @@ import sounddevice as sd
 import soundfile as sf
 import scipy.fftpack
 import functions.docxSave  as ds
-
 document = ds.DocxSave()
 # Zadanie 1y
 document.addHeading("Zadanie 1",0)
