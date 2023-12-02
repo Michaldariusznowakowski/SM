@@ -237,17 +237,18 @@ for filename in files:
 
 dx.h("Wnioski",1)
 dx.h("rdoc.jpg",2)
-dx.p("Orginalny obraz jest jednolity i nie zawiera szumów, o wiele lepiej sprawdza się byteRun.")
+dx.p("Obraz zawiera mało różnych kolorów, RLE radzi sobie tutaj o wiele lepiej niż ByteRun.")
 
 dx.h("rtech.jpg",2)
-dx.p("Orginalny obraz nie jest jednolity i zawiera szumy, wyniki są bardzo zbliżone, ale nieco lepiej wypada ByteRun.")
+dx.p("Obraz ma małą różnorodność kolorów, tutaj RLE radzi sobie o kilka procent lepiej. Udało nam się uzyskać około 30% zmniejszenie rozmiaru obrazu.")
 
 dx.h("rcolor.jpg",2)
-dx.p("Dla tego obrazu, najlepiej sprawdza się ByteRun, ponieważ obraz zawiera różnych kolorów, co powoduje, że RLE nie jest w stanie skompresować go tak dobrze jak ByteRun. ")
-
+dx.p("Dla tego obrazu, żaden z algorytmów nie sprawdza się dobrze, obraz ma za dużo różnych kolorów i nie jest jednolity. Znacząco zwiększa to rozmiar pliku po kompresji. ByteRun wypada o wiele gorzej niż RLE.")
+dx.p("RLE zwiększył rozmiar prawie 3 krotnie, a ByteRun prawie 6 krotnie.")
 dx.h("Wniosek ogólny",2)
-dx.p("Pomimo prostoty działania tych algorytmów świetnie nadają się do kompresji, znacząco zmniejszając rozmiar plików.")
-dx.p("A dodatkowo nie wpływają na jakość obrazu, ponieważ są to algorytmy bezstratne.")
+dx.p("Algorytmy te świetnie sprawdzaja się na obrazach, plikach, gdzie występuje dużo powtarzajacych się wartości")
+dx.p("W przypadku gdy mamy dużą różnorodność wartości, algorytmy te nie sprawdzają się dobrze i zwiększają rozmiar pliku.")
+dx.p("Jednak warto wspomnieć że te algorytmy są bezstratne, więc nie tracimy na jakości obrazów.")
 print("Done")
 
 dx.save("lab_5_nm49353_michal_nowakowski.docx")
